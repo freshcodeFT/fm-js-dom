@@ -1,11 +1,3 @@
-//const [firstButton, secondButton] = document.getElementsByTagName('button');
-
-function alertOnClick() {
-  alert("Success");
-}
-
-//firstButton.addEventListener('click', alertOnClick);
-
 /*
 // Выбирает все элементы по тегу
 document.getElementsByTagName 
@@ -22,25 +14,16 @@ document.querySelectorAll('#list > li > span')
 // Выбирает первый найденный элемент, который соответствует css селектору
 document.querySelector
 */
-
-/*const buttons = [...document.getElementsByClassName('main-button')];
-
-buttons.forEach((elem) => {
-  elem.addEventListener('click', alertOnClick);
-});
+/*
+  const heading = document.querySelector('.art > h1');
+  const img = document.querySelector('.art > img');
+  const span = document.querySelector('.art > p > span');
 */
+const art = document.querySelector('.art');
 
-const mainSection = document.querySelector(".main-section");
-console.log(mainSection);
+const heading = art.querySelector('h1');
+const img = art.querySelector('img');
+const span = art.querySelector('p > span');
 
-const buttons = document.querySelectorAll(".main-button");
+console.log(heading, img, span);
 
-for (elem of buttons) {
-  elem.addEventListener("click", alertOnClick);
-}
-
-const par = document.querySelector("#unique");
-console.log(par);
-
-const heading = document.querySelector(".main-section > h1");
-console.log(heading);
