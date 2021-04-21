@@ -1,29 +1,31 @@
-/*
-// Выбирает все элементы по тегу
-document.getElementsByTagName 
+const imageDB = [
+  "https://www.w3schools.com/bootstrap/chicago.jpg",
+  "https://www.w3schools.com/bootstrap/ny.jpg",
+  "https://www.w3schools.com/bootstrap/la.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png",
+  "https://html5css.ru/css/img_lights.jpg",
 
-// Выбирает все элементы по названию класса
-document.getElementsByClassName 
+];
 
-// Выбирает элемент по его id
-document.getElementById 
+const slider = new Slider(imageDB);
 
-// Выбирает все элементы, которые соответствуют css селектору
-document.querySelectorAll('#list > li > span') 
+const slideImage = document.querySelector(".slide");
+const [prevButton, nextButton] = document.querySelectorAll(
+  ".slider-container > button"
+);
 
-// Выбирает первый найденный элемент, который соответствует css селектору
-document.querySelector
-*/
-/*
-  const heading = document.querySelector('.art > h1');
-  const img = document.querySelector('.art > img');
-  const span = document.querySelector('.art > p > span');
-*/
-const art = document.querySelector('.art');
+updateView(slider.currentSlide);
 
-const heading = art.querySelector('h1');
-const img = art.querySelector('img');
-const span = art.querySelector('p > span');
+prevButton.addEventListener("click", () => {
+  const newImage = slider.prev();
+  updateView(newImage);
+});
 
-console.log(heading, img, span);
+nextButton.addEventListener("click", () => {
+  const newImage = slider.next();
+  updateView(newImage);
+});
 
+function updateView(imgLink) {
+  slideImage.setAttribute("src", imgLink);
+}
