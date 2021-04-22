@@ -1,4 +1,3 @@
-
 /*
 function makeCounter(){
   let count = 0;
@@ -26,10 +25,10 @@ adder(50) //70
 adder(100) //170
 */
 
-function createAdder(n){
-  return function (m){
-    return n+=m;
-  }
-}
+const createAdder = (n) => (m) => (n += m);
+
 
 const adder = createAdder(10);
+
+console.log(adder(20));
+console.log(adder(20));
