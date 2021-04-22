@@ -1,8 +1,14 @@
-const btn = document.querySelector('#unique');
+const btn = document.querySelector("#unique");
 
-const btnHandler = ()=>{
-  alert('success');
-  //btn.removeEventListener('click', btnHandler);
+function createBtnHandler(clicksAmount = 5) {
+  const btnHandler = () => {
+    alert("success");
+    clicksAmount--;
+    if (clicksAmount === 0) {
+      btn.removeEventListener("click", btnHandler);
+    }
+  };
+  return btnHandler;
 }
 
-btn.addEventListener('click', btnHandler, {once: true});
+btn.addEventListener("click", createBtnHandler(3));
