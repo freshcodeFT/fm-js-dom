@@ -16,15 +16,13 @@ const [prevButton, nextButton] = document.querySelectorAll(
 
 updateView(slider.currentSlide);
 
-function createButtonHandler(action = 'next'){
-  return () => {
-    const newImage = slider[action]();
-    updateView(newImage);
-  }
-}
+const createButtonHandler = (action = "next") => () => {
+  const newImage = slider[action]();
+  updateView(newImage);
+};
 
-prevButton.addEventListener("click", createButtonHandler('prev'));
-nextButton.addEventListener("click", createButtonHandler('next'));
+prevButton.addEventListener("click", createButtonHandler("prev"));
+nextButton.addEventListener("click", createButtonHandler("next"));
 
 /*
 prevButton.addEventListener("click", () => {
