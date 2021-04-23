@@ -1,4 +1,4 @@
-const imageDB = [
+/*const imageDB = [
   "https://www.w3schools.com/bootstrap/chicago.jpg",
   "https://www.w3schools.com/bootstrap/ny.jpg",
   "https://www.w3schools.com/bootstrap/la.jpg",
@@ -40,18 +40,6 @@ nextButton.addEventListener("click", createButtonHandler("next"));
 
 prevButton.addEventListener('click', (e)=> {
   console.log(e);
-})
+})*/
 
-/*nextButton.onclick = createButtonHandler("next");*/
-
-/*
-prevButton.addEventListener("click", () => {
-  const newImage = slider.prev();
-  updateView(newImage);
-});
-
-nextButton.addEventListener("click", () => {
-  const newImage = slider.next();
-  updateView(newImage);
-});*/
 
