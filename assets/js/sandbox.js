@@ -1,9 +1,9 @@
 'use strict';
 
-const btn = document.querySelector("#unique");
-const btn2 = document.querySelector("#unique2");
 
-function createBtnHandler(clicksAmount = 5) {
+const [btn1, btn2] = document.querySelectorAll('.changing-button');
+
+/*function createBtnHandler(clicksAmount = 5) {
   const btnHandler = ({ target: targetBtn }) => {
 
     if (clicksAmount <= 0) {
@@ -15,24 +15,25 @@ function createBtnHandler(clicksAmount = 5) {
     clicksAmount--;
   };
   return btnHandler;
-}
+}*/
 
-//const btnHandler = createBtnHandler(3);
-
-/*btn.addEventListener("click", btnHandler);
-btn2.addEventListener("click", btnHandler);*/
 
 /*
-const btnHandler = (e)=>{
-  console.group();
-  console.log(e);
-  console.log(e.target);
-  console.log(e.currentTarget);
-  console.groupEnd();
-};
+ Поменять местами содержимое 
+ двух кнопок по наведению.
+ */
 
-btn.addEventListener("click",btnHandler);
+const btnEnterHandler = () => {
+  const temp = btn1.innerText;
+  btn1.innerText = btn2.innerText;
+  btn2.innerText = temp;
+}
 
-window.addEventListener("click", btnHandler);
-document.addEventListener("click", btnHandler);
-document.body.addEventListener("click", btnHandler);*/
+btn1.addEventListener('mouseenter', btnEnterHandler);
+btn2.addEventListener('mouseenter', btnEnterHandler);
+
+// for (const btn of btns){
+//   btn.addEventListener('mouseenter', ({target})=>{
+//    target.innerText = 'Changed';
+//   });
+// }
