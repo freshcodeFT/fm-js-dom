@@ -38,3 +38,8 @@
 .btn-controls:focus{
   color: red;
 }
+
+#root{
+  height: 400px;
+  background-color: aqua;
+}
