@@ -6,27 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS Document Object Model</title>
     <link rel="stylesheet" href="./assets/css/styles.css" />
+    <script defer src="./assets/js/data.js"></script>
+    <script defer src="./assets/js/sandbox.js"></script>
+    <script defer src="./assets/js/index.js"></script>
   </head>
   <body>
-    <!-- <div class="slider-container">
-      <button class="btn-controls prev-btn"><</button>
-      <div>
-        <img class="slide" src="" alt="">
-      </div>
-      <button class="btn-controls next-btn">></button>
-    </div> -->
-
-    <div id="root">
-      <button data-color="red">R</button>
-      <button data-color="green">G</button>
-      <button data-color="blue">B</button>
-      <button data-color="orange">Color4</button>
-      <button data-color="dodgerblue">Color5</button>
-    </div>
-    
-
-    <script src="./assets/js/sandbox.js"></script>
-    <script src="./assets/js/index.js"></script>
+    <section>
+      <h2>Restaurants</h2>
+      <ul id="root" class="cardsContainer">
+        <li class="cardWrapper">
+          <article class="cardContainer">
+            <div class="cardImageWrapper">
+              <div class="initials">ABCD</div>
+              <img src="https://i.pinimg.com/originals/6f/e2/2b/6fe22b591ce7fe8baf133ad9b0f3f66e.jpg" alt="" class="cardImage">
+            </div>
+            <div class="contentWrapper">
+              <h3 class="cardName">Name</h3>
+              <p class="cardDescription">description</p>
+            </div>
+          </article>
+        </li>
+      </ul>
+    </section>
   </body>
 </html>
 
