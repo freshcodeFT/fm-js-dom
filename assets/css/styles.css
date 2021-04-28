@@ -60,3 +60,7 @@
   font-weight: bold;
   margin: 1rem 0;
 }
+
+.cardName:empty::after{
+  content: "Unknown";
+}
